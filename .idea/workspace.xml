@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5385cdb9-8e17-4572-89b7-4f6b89960341" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1UCLF3J7eEy15M4O2OhWJ7zLwIZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.shoppingCart.js">
+    <configuration name="Unnamed" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" nameIsGenerated="true" port="9229">
+      <method v="2" />
+    </configuration>
+    <configuration name="colourPalette.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/js/colourPalette.js" working-dir="$PROJECT_DIR$/js">
+      <method v="2" />
+    </configuration>
+    <configuration name="orderDetails.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/js/orderDetails.js" working-dir="$PROJECT_DIR$/js">
+      <method v="2" />
+    </configuration>
+    <configuration name="shoppingCart.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/js/shoppingCart.js" working-dir="$PROJECT_DIR$/js">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Attach to Node.js/Chrome.Unnamed" />
+      <item itemvalue="Node.js.orderDetails.js" />
+      <item itemvalue="Node.js.colourPalette.js" />
+      <item itemvalue="Node.js.shoppingCart.js" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.shoppingCart.js" />
+        <item itemvalue="Node.js.colourPalette.js" />
+        <item itemvalue="Node.js.orderDetails.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5385cdb9-8e17-4572-89b7-4f6b89960341" name="Default Changelist" comment="" />
+      <created>1574855523498</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574855523498</updated>
+      <workItem from="1574855524750" duration="8785000" />
+      <workItem from="1574867279543" duration="10615000" />
+      <workItem from="1574883657599" duration="3736000" />
+      <workItem from="1574919004448" duration="12568000" />
+      <workItem from="1574954466021" duration="26290000" />
+      <workItem from="1574980957406" duration="38000" />
+      <workItem from="1575019015179" duration="159000" />
+      <workItem from="1575019902447" duration="5218000" />
+      <workItem from="1575028246402" duration="10082000" />
+      <workItem from="1575053316255" duration="5933000" />
+      <workItem from="1575059455051" duration="400000" />
+      <workItem from="1575060353004" duration="28000" />
+      <workItem from="1575060532461" duration="148000" />
+      <workItem from="1575104157241" duration="42000" />
+      <workItem from="1575104216565" duration="4945000" />
+      <workItem from="1575109305680" duration="1621000" />
+      <workItem from="1575113919762" duration="2138000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+</project>

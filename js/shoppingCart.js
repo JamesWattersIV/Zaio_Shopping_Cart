@@ -130,6 +130,6 @@ function getDiscount(){
 }
 
 function reloadPage(){
-    alert("Thank you for shopping.\nPage Will Now Reload");
+    alert("Thank You For Shopping.\nThe Page Will Now Reload.");
     location.reload();
 }

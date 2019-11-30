@@ -22,10 +22,12 @@ const itemColours = [
 function initialiseItemColours(){
     let tempJson = getItemDetails();
     for(let i=0;i<itemColours.length;i++){
-        console.log(tempJson.colours[itemColours[i]]['colour']);
         document.getElementById('btn-'+i).style.backgroundColor = itemColours[i];
         document.getElementById('btn-'+i).id = tempJson.colours[itemColours[i]]['display-name'];
     }
+    document.getElementById(tempJson.colours[itemColours[0]]['display-name']).focus();
+    changeColour(tempJson.colours[itemColours[0]]['display-name']);
+
 }
 
 function getColourPalette(){
@@ -33,6 +35,7 @@ function getColourPalette(){
 }
 
 function changeColour(value){
+    console.log(value)
     document.getElementById('colour-changer').innerText = value;
     updatePrice(value);
     enableAddToCart();
