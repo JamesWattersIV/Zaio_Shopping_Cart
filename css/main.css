@@ -1,0 +1,400 @@
+html {
+    font-size: 1rem;
+}
+
+body{
+    /*Set font for page*/
+    font-family: "Heebo",sans-serif;
+
+    /* Set Background Image*/
+    background-image: url("../img/Background.JPG");
+
+    /* Center and scale the image*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+
+    min-width: 300px;
+    min-height: 100vh;
+}
+
+.entire-page{
+    background-color: transparent;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+}
+
+.container{
+    height: 100%;
+    width: 35%;
+    background-color: white;
+    min-width: 300px;
+    overflow: auto;
+    padding-bottom: 20px;
+}
+
+.container #item-name{
+    padding: 40px 0px 0px 0px;
+    font-weight: bold;
+    color: black;
+    font-size: 3vw;
+}
+
+.container .main-display{
+    color: grey;
+    font-size: 1.25vw;
+    padding-right: 15px;
+}
+
+@media screen and (max-width:1200px) {
+ .container .main-display{
+     font-size: 1rem;
+ }
+
+ .main-display#discounted-price{
+     font-size: 1.4rem;
+ }
+
+ .colour-container .btn-circle{
+     width: 25px;
+     height: 25px;
+ }
+
+ .badge{
+     width: 20% !important;
+     height: 90% !important;
+ }
+
+ #add-to-cart{
+     width: 210px;
+     height: 50px;
+ }
+
+ #btn-checkout{
+     width: 150px !important;
+ }
+
+
+}
+
+/*Media Query for dealing with larger screens*/
+@media screen and (max-width:992px) {
+    .container .main-display{
+        font-size: 1rem;
+    }
+
+    .main-display#discounted-price{
+        font-size: 1.2rem;
+    }
+
+    #add-to-cart{
+        width: 180px;
+        height: 50px;
+    }
+
+    #btn-checkout{
+        width: 100px !important;
+    }
+}
+
+/*Media Query for dealing with medium screens*/
+@media screen and (max-width:768px) {
+    .container{
+        font-size: 1.25rem;
+    }
+
+    .container .main-display{
+        font-size: 1rem;
+    }
+
+    .main-display#discounted-price{
+        font-size: 1.1rem;
+    }
+
+    #item-name{
+        font-size: 28px !important;
+    }
+
+    #add-to-cart{
+        width: 180px;
+        height: 50px;
+    }
+
+    #btn-checkout{
+            margin-top:15px !important;
+            width: 200px !important;
+        }
+}
+
+/*Media Query for dealing with medium screens*/
+@media screen and (max-width:567px){
+
+    .container, .main-display{
+        font-size: 1.25rem;
+    }
+
+     #item-name{
+         font-size: 25px !important;
+     }
+
+     #add-to-cart{
+         width: 150px;
+         height: 50px;
+     }
+
+    #btn-checkout{
+        margin-top: 10px;
+    }
+
+    #continue-shopping, #checkout{
+        width: 200px !important;
+    }
+
+    .cart-summary{
+        width: 170px !important;
+        height: 50px !important;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    .cart-summary{
+        width: 120px !important;
+        height: 60px !important;
+    }
+
+    #dynamicCartModal{
+        width: 300px !important;
+    }
+
+    #cart-summary-titles{
+        width: 300px !important;
+    }
+}
+
+/*Media Query for dealing with smallest screens*/
+@media screen and (max-width:300px) {
+    .container #item-name {
+        font-size: 1.25rem;
+    }
+
+    #continue-shopping, #checkout{
+        width: 150px !important;
+        height: 60px !important;
+    }
+
+
+}
+
+.container-rules{
+    white-space: nowrap;
+}
+
+.col-align{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/*Star Rating*/
+.fa-star{
+    color: #b0b6b1;
+}
+
+.checked {
+    color: black;
+}
+
+
+/*Pricing Layout*/
+.row-layout{
+    padding: 20px 20px 0px 20px;
+    display: flex;
+    align-items: center;
+}
+
+/*Formatting Text*/
+#discounted-price{
+    font-weight: bold;
+    color: indianred;
+    font-size: 1.8vw;
+    padding-right: 10px;
+}
+
+#item-offer, #colour-changer{
+color: black;
+}
+
+#discount{
+font-weight: bold;
+}
+
+#no-discount-price{
+    text-decoration: line-through;
+}
+
+.btn-row{
+    padding: 20px 10px 0px 10px;
+}
+
+.col-1{
+    padding-bottom: 5px;
+}
+
+/*Colour Palette Buttons*/
+.btn-circle{
+    background-color: white;
+    width:30px;
+    height:30px;
+    padding:5px 2px 5px 2px;
+    border-radius: 50%;
+    border: 1px darkgray;
+}
+
+/*Ordered Item Button*/
+.btn-order{
+    width:25px;
+    height:25px;
+}
+
+.btn-cart{
+    width: 20px;
+    height: 20px;
+}
+
+.btn-cart:disabled{
+    opacity: 100%;
+}
+
+.row-order{
+    margin-bottom: -10px;
+}
+
+/*Format secondary heading */
+.secondary-display{
+    color: black !important;
+    font-weight: bold;
+    font-size: 17px !important;
+}
+
+/*Format Quantity Badge*/
+.badge{
+    border: 3px solid black;
+    width: 90px;
+    height: 50px;
+    border-radius: 40px;
+    padding-top: 11px;
+}
+
+/*Format Add to Cart Button*/
+.cart-submission{
+    border-radius: 40px;
+    width: 250px;
+    height: 50px;
+    background-color: black;
+    text-decoration-color: white;
+    border-color: black;
+    margin: 0px 0px 0px 10px;
+}
+
+.cart-submission:hover{
+    background-color: #6f7375;
+    border-color: #6f7375;
+}
+
+.cart-submission:focus{
+    border: white 6px solid;
+}
+
+.cart-submission:disabled{
+    background-color: darkgrey;
+    border: none;
+    color: #494648;
+}
+
+/*Formatting for horizontal Line*/
+hr{
+    height: 1px;
+    border-top: 2px solid darkgray;
+    margin: 25px 0px 15px 0px;
+}
+
+/*Formatting for total order*/
+#total-order{
+    padding-top: 20px;
+}
+
+#btn-checkout{
+    width: 200px;
+    height: 50px;
+}
+
+/*------------- Modal Formatting ------------------------------------------------------------------------------*/
+/*Format Add to Cart Modal Buttons*/
+
+.modal-footer .btn-success,.btn-danger{
+    border-color: darkgray;
+    color: black;
+    font-weight: bold;
+}
+
+.modal-body{
+    margin-bottom: 20px;
+}
+
+/*Formats the look for increment and decrement button*/
+.btn-quantity{
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 0px 5px 0px 5px;
+}
+
+#btn-minus{
+    background-image: url("../img/minus.JPG");
+}
+
+#btn-plus{
+    background-image: url("../img/plus.JPG");
+}
+
+#add-quantity{
+    font-size: 30px !important;
+}
+
+#modal-colour-selection{
+    font-size: 28px !important;
+}
+
+.smallModal{
+    width:340px !important;
+}
+
+.checkout-cart{
+    padding: 5px 0px 5px 0px;
+}
+
+.cartHR{
+    height: 1px;
+    border-top: 2px solid lightgray;
+    margin: 0px 0px 0px 0px;
+}
+
+.cart-display{
+    font-size: 15px !important;
+    color: darkgray;
+    padding-top: 5px;
+}
+
+.cart-summary{
+    width: 200px;
+    height: 50px;
+    margin: 0px 10px 0px 10px;
+}
+
+
+
