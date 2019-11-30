@@ -73,7 +73,7 @@ function populateOrderList(){
     //clear current display
     clearOrderList();
 
-    for(let i=0;i<orderDetails.length;i++){
+    for(let i=0;i<orderDetails.length;i++){;
         createButton(getColourName(orderDetails[i].colour),orderDetails[i].quantity);
     }
 }
@@ -99,8 +99,9 @@ function createButton(btnColour,btnQuantity){
 
         let newBtn = document.createElement('button');
         newBtn.disabled = false;
-        newBtn.id = 'testBtn';
+        newBtn.id = getDisplayName(btnColour);
         newBtn.type = 'button';
+        newBtn.setAttribute("onclick", "deleteBtn(this)");
         newBtn.className = 'btn btn-primary btn-circle btn-order';
         newBtn.style.backgroundColor = btnColour;
         newDiv.appendChild(newBtn);
@@ -149,92 +150,134 @@ function populateCheckoutModal(){
 
     //Create the Cart from the order array
     for(let i=0;i<orderDetails.length;i++){
+        console.log(orderDetails[i].quantity);
+        if(orderDetails[i].quantity > 0) {
+            console.log('IN HERERERER')
+            //Create Row Layout Div
+            let rowDiv = document.createElement('div');
+            rowDiv.className = 'row row-layout checkout-cart';
 
-        //Create Row Layout Div
-        let rowDiv = document.createElement('div');
-        rowDiv.className ='row row-layout checkout-cart';
+            //Create First Column for Item Details
+            let itemCol = document.createElement("div");
+            itemCol.className = 'col-5 col-sm-5';
 
-        //Create First Column for Item Details
-        let itemCol = document.createElement("div");
-        itemCol.className = 'col-5 col-sm-5';
-
-        let row = document.createElement("div");
-        row.className = 'row';
+            let row = document.createElement("div");
+            row.className = 'row';
 
             //Create the sub elements for first column Div
             let itemDetailsOne = document.createElement("div");
             itemDetailsOne.className = 'col-2 col-sm-2';
-                let btnItem = document.createElement('button');
-                btnItem.className = 'btn btn-primary btn-circle btn-cart';
-                btnItem.type = 'button';
-                btnItem.disabled = true;
-                btnItem.style.backgroundColor = getColourName(orderDetails[i].colour);
+            let btnItem = document.createElement('button');
+            btnItem.className = 'btn btn-primary btn-circle btn-cart';
+            btnItem.type = 'button';
+            btnItem.disabled = true;
+            btnItem.style.backgroundColor = getColourName(orderDetails[i].colour);
             itemDetailsOne.appendChild(btnItem);
 
             //Create the colour element
             let itemDetailsTwo = document.createElement("div");
             itemDetailsTwo.className = 'col-8 col-sm-8';
-                let itemColour = document.createElement('h3');
-                itemColour.className = 'secondary-display cart-display';
-                itemColour.innerText = orderDetails[i].colour;
+            let itemColour = document.createElement('h3');
+            itemColour.className = 'secondary-display cart-display';
+            itemColour.innerText = orderDetails[i].colour;
             itemDetailsTwo.appendChild(itemColour);
 
-        let itemDetailsThree = document.createElement("div");
-        itemDetailsThree.className = 'col-2 col-sm-2';
+            let itemDetailsThree = document.createElement("div");
+            itemDetailsThree.className = 'col-2 col-sm-2';
 
-        row.appendChild(itemDetailsOne);
-        row.appendChild(itemDetailsTwo);
-        row.appendChild(itemDetailsThree);
+            row.appendChild(itemDetailsOne);
+            row.appendChild(itemDetailsTwo);
+            row.appendChild(itemDetailsThree);
 
-        itemCol.appendChild(row);
-        rowDiv.appendChild(itemCol);
+            itemCol.appendChild(row);
+            rowDiv.appendChild(itemCol);
 
-        //Now create the price tag
-        let itemPrice = document.createElement("div");
-        itemPrice.className = 'col-2 col-sm-2';
+            //Now create the price tag
+            let itemPrice = document.createElement("div");
+            itemPrice.className = 'col-2 col-sm-2';
             let price = document.createElement('h3');
             price.className = 'secondary-display cart-display';
             price.innerText = 'R' + orderDetails[i].price;
-        itemPrice.appendChild(price);
+            itemPrice.appendChild(price);
 
-       //Add it to the main Div
-       rowDiv.appendChild(itemPrice);
+            //Add it to the main Div
+            rowDiv.appendChild(itemPrice);
 
-       //Now Create White space divider and add it to the main div
-        let whiteSpace = document.createElement("div");
-        whiteSpace.className = 'col-1 col-sm-1';
+            //Now Create White space divider and add it to the main div
+            let whiteSpace = document.createElement("div");
+            whiteSpace.className = 'col-1 col-sm-1';
 
-        rowDiv.appendChild(whiteSpace);
+            rowDiv.appendChild(whiteSpace);
 
-        //Create the Quantity element
-        let itemQuantity = document.createElement("div");
-        itemQuantity.className = 'col-1 col-sm-1';
+            //Create the Quantity element
+            let itemQuantity = document.createElement("div");
+            itemQuantity.className = 'col-1 col-sm-1';
             let number = document.createElement('h3');
             number.className = 'secondary-display cart-display';
             number.innerText = orderDetails[i].quantity;
-        itemQuantity.appendChild(number);
+            itemQuantity.appendChild(number);
 
-        //Add it to the main Div
-        rowDiv.appendChild(itemQuantity);
+            //Add it to the main Div
+            rowDiv.appendChild(itemQuantity);
 
-        //Create Total element
-        let itemTotal = document.createElement("div");
-        itemTotal.className = 'col-3 col-sm-3';
+
+            //Create Total element
+            let itemTotal = document.createElement("div");
+            itemTotal.className = 'col-3 col-sm-3';
             let total = document.createElement('h3');
             total.className = 'secondary-display cart-display';
             total.style.paddingTop = '2px';
             total.innerText = 'R' + (orderDetails[i].quantity * orderDetails[i].price).toFixed(2);
-         itemTotal.appendChild(total);
-        rowDiv.appendChild(itemTotal);
+            itemTotal.appendChild(total);
+            rowDiv.appendChild(itemTotal);
 
 
-        document.getElementById('dynamicCartModal').appendChild(rowDiv);
-        //Draw horizontal divider line
-        let itemDivider = document.createElement("div");
-        itemDivider.className = 'cartHR';
-        document.getElementById('dynamicCartModal').appendChild(itemDivider);
+            document.getElementById('dynamicCartModal').appendChild(rowDiv);
+            //Draw horizontal divider line
+            let itemDivider = document.createElement("div");
+            itemDivider.className = 'cartHR';
+            document.getElementById('dynamicCartModal').appendChild(itemDivider);
 
-        //Update the Order Total
-        document.getElementById('cartTotal').innerText = document.getElementById('total-price').innerText;
+            //Update the Order Total
+            document.getElementById('cartTotal').innerText = document.getElementById('total-price').innerText;
+        }
+    }
+}
+
+function deleteBtn(value){
+    console.log(value.id);
+    let tempList = itemDetails;
+
+    let colorDel = value.id;
+    for(let i=0;i<orderDetails.length;i++){
+        if(orderDetails[i].colour == colorDel){
+            //check to see if quantity is 0
+            if(orderDetails[i].quantity > 0){
+                orderDetails[i].quantity =  orderDetails[i].quantity -1;
+                break;
+            }
+        }
+
+    }
+
+
+    populateOrderList();
+    console.log(orderDetails);
+    setQuantity();
+    updateTotal((-1)*(tempList.colours[getColourName(colorDel)]['price']),1);
+    checkTotal();
+}
+
+function getDisplayName(colourCode){
+    let tempList = itemDetails;
+    let DisplayName = tempList.colours[colourCode]['display-name'];
+    return DisplayName;
+}
+
+function checkTotal(){
+    let total = document.getElementById('total-price').innerText;
+
+    if((total == 'R-0.00') || (total == 'R0.00')){
+        document.getElementById('total-order').style.display = 'none';
     }
 }
