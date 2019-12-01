@@ -259,6 +259,14 @@ font-weight: bold;
     height:25px;
 }
 
+.btn-order:hover{
+    opacity: 60%;
+    background-image: url("../img/x3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .btn-cart{
     width: 20px;
     height: 20px;

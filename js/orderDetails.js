@@ -260,7 +260,6 @@ function deleteBtn(value){
 
     }
 
-
     populateOrderList();
     console.log(orderDetails);
     setQuantity();

@@ -77,9 +77,9 @@ $(document).ready(function(){
     });
 
 });
+
 $(document).ready(function(){
     $(".btn-circle").focusout(function() {
         $(this).css("border", "none");
     });
-
 });
