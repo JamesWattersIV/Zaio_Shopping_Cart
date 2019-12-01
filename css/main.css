@@ -404,5 +404,33 @@ hr{
     margin: 0px 10px 0px 10px;
 }
 
+.help-image{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#help-colour-select{
+    background-image: url("../img/help/colour.png");
+}
+
+#help-quantity{
+    background-image: url("../img/help/accept.png");
+}
+
+#help-order-details{
+    background-image: url("../img/help/details.png");
+}
+
+#help-remove{
+    background-image: url("../img/help/remove.png");
+}
+
+#help-checkout{
+    background-image: url("../img/help/checkout.png");
+}
+
+
+
 
 

@@ -112,7 +112,7 @@
         <!-- End Order Total and Check out -->
         <div><hr/></div>
 
-        <div class="row row-layout"><h3 class="secondary-display" style="font-weight: bold">Need Help?</h3></div>
+        <div class="row row-layout"><h3 class="secondary-display" style="font-weight: bold;cursor: pointer" data-toggle="modal" data-target="#HelpModalLong">Need Help?</h3></div>
         <div class="row row-layout"><h3 class="secondary-display" style="font-weight: bold">Shipping & Returns</h3></div>
 
     </div> <!-- End Page Container -->
@@ -226,6 +226,57 @@
         </div>
         </div>
     </div>  <!-- End Continue Shopping Modal -->
+
+
+
+    <!-- Help Modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="HelpModalLong" tabindex="-1" role="dialog" aria-labelledby="HelpModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title main-display" id="HelpModalLongTitle" style="font-weight: bold">Help</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-sm-12"><h2 class="secondary-display">Adding An Item To Your Order</h2></div>
+                        <div class="col-4 col-sm-4"><p2> To add an item to your order, simply select the colour of your choice, and click the "<b>Add To Cart</b>" Button</p2></div>
+                        <div id="help-colour-select" class="col-8 col-sm-8 help-image"></div>
+                    </div>
+                    <div><hr/></div>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 text-right" style="align-content: end"><h2 class="secondary-display">Select The Quantity</h2></div>
+                        <div id="help-quantity" class="col-7 col-sm-7 help-image"></div>
+                        <div class="col-5 col-sm-5"><p2>Select the quantity of the colour that you would like, & click the "<b>Accept</b>" Button to add it to your order.</p2></div>
+                    </div>
+                    <div><hr/></div>
+                    <div class="row">
+                        <div class="col-12 col-sm-12"><h2 class="secondary-display">Your Order Details</h2></div>
+                        <div class="col-6 col-sm-6"><p2>The details of your order and total price are displayed at the bottom of the page, where you can checkout by clicking the "<b>Checkout</b>" Button</p2></div>
+                        <div id="help-order-details" class="col-6 col-sm-6 help-image"></div>
+                    </div>
+                    <div><hr/></div>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 text-right"><h2 class="secondary-display">Removing An Item From Your Order</h2></div>
+                        <div id="help-remove" class="col-6 col-sm-6 help-image"></div>
+                        <div class="col-6 col-sm-6"><p2>To remove an item from your order, simply click the colour of the item you wish to remove in the Order Details section.</p2></div>
+                    </div>
+                    <div><hr/></div>
+                    <div class="row">
+                        <div class="col-12 col-sm-12"><h2 class="secondary-display">Checkout</h2></div>
+                        <div class="col-6 col-sm-6"><p2>Once you are happy with your order, click the "<b>Checkout</b>" Button. A summary of your order will be displayed, where you can click "<b>Checkout</b>" Button to complete your order</p2></div>
+                        <div id="help-checkout" class="col-6 col-sm-6 help-image"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </div> <!-- End Entire Page Container-->
